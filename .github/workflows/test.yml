@@ -16,4 +16,5 @@ jobs:
         python-version: 3.8
     - name: Perform tests
       run: |
+        ls
         python test.py
