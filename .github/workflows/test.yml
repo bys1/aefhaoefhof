@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  push:
+    branch: main
+
+jobs:
+  
+  test:
+    name: Test
+    runs-on: [ubuntu-latest]
+    steps:
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Perform tests
+      run: |
+        python test.py
